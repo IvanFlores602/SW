@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <!-- ios support -->
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938">
+    <meta name="theme-color" content="#db4938">
+    <title>Sell and Register</title>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js")
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <h1>Sell And Register</h1>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Blog</li>
+        </ul>
+      </nav>
+      <div class="container"></div>
+    </main>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+  <script type="text/javascript">
+
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+         }, function(err) {
+    console.log('ServiceWorker registration failed: ', err);
+    });
+    
+</script>
+</html>
